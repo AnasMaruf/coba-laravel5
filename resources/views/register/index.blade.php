@@ -42,8 +42,8 @@
         </div>  
         @enderror
       </div>
-      <button class="w-100 btn btn-lg btn-primary mt-2" type="submit">Login</button>
-      <small class="d-block text-center mt-3">Not Registered? <a class="text-decoration-none" href="/register"> Register Now!</a></small>
+      <button class="w-100 btn btn-lg btn-primary mt-2" type="submit">Register</button>
+      <small class="d-block text-center mt-3">Not Registered? <a class="text-decoration-none" href="/login"> login Now!</a></small>
   </form>
   </main> 
 </div>
