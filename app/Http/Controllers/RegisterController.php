@@ -26,6 +26,7 @@ class RegisterController extends Controller
             'password' => 'required|min:5|max:255'
         ]);
         $validatedData['password'] = Hash::make($validatedData['password']);
+        $validatedData['is_admin'] = 0;
         User::create($validatedData);
         return redirect('/login')->with('success', 'Registration successfull! please login!');
     }

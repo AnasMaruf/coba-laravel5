@@ -24,7 +24,6 @@
         </li>
       </ul>
       @can('admin')
-      
       <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <span>Administrator</span>
       </h6>
@@ -33,6 +32,12 @@
           <a class="nav-link {{ Request::is('dashboard/categories*')? 'active': '' }}" aria-current="page" href="/dashboard/categories">
             <span data-feather="grid"></span>
             Posts Categories
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/manageUser*')? 'active': '' }}" aria-current="page" href="/dashboard/manageUser">
+            <span data-feather="database"></span>
+            Management User
           </a>
         </li>
       </ul>
