@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Roles;
 
 class DatabaseSeeder extends Seeder
 {
@@ -28,6 +29,12 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Cryptocurrency',
             'slug' => 'cryptocurrency'
+        ]);
+        Roles::create([
+            'role' => 'Admin'
+        ]);
+        Roles::create([
+            'role' => 'Member'
         ]);
         Post::Factory(20)->create();
     }

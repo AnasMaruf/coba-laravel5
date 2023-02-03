@@ -62,5 +62,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin')->parameters([
     'categories' => 'category:slug'
 ]);
-Route::resource('/dashboard/manageUser', ManageUserController::class)->middleware('admin');
+Route::resource('/dashboard/manageUser', ManageUserController::class)->middleware('admin')->parameters([
+    'manageUser' => 'user:username'
+]);
 Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');

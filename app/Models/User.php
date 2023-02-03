@@ -38,13 +38,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function posts()
+    public function post()
     {
         return $this->hasMany(Post::class);
     }
 
-    public function managementuser()
+    public function Role()
     {
-        return $this->belongsTo(ManagementUsers::class);
+        return $this->belongsTo(Roles::class);
     }
 }

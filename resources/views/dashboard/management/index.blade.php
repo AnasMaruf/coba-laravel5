@@ -24,11 +24,10 @@
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $user->name}}</td>
-              <td>{{ $user->is_admin }}</td>
+              <td>{{ $user->Role->role }}</td>
               <td>
-                <a href="/dashboard/users/{{ $user->slug }}" class="badge bg-warning"><span data-feather="eye"></span></a>
-                <a class="badge bg-success" href="/dashboard/users/{{ $user->slug }}/edit"><span data-feather="edit"></span></a>
-                <form action="/dashboard/users/{{ $user->slug }}" method="POST" class="d-inline">
+                <a class="badge bg-success" href="/dashboard/ManageUser/{{ $user->username }}/edit"><span data-feather="edit"></span></a>
+                <form action="/dashboard/manageUser/{{ $user->username }}" method="POST" class="d-inline">
                   @method('delete')
                   @csrf
                   <button class="badge bg-danger border-0" type="submit" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
