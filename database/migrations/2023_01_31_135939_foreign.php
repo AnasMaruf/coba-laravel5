@@ -13,9 +13,6 @@ class Foreign extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreign('is_admin')->references('id')->on('management_users');
-        });
     }
 
     /**

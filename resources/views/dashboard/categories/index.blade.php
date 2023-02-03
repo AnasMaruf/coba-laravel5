@@ -24,7 +24,6 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $category->name}}</td>
               <td>
-                <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-warning"><span data-feather="eye"></span></a>
                 <a class="badge bg-success" href="/dashboard/categories/{{ $category->slug }}/edit"><span data-feather="edit"></span></a>
                 <form action="/dashboard/categories/{{ $category->slug }}" method="POST" class="d-inline">
                   @method('delete')
